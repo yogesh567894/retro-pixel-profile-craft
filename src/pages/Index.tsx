@@ -1,51 +1,67 @@
 
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Trophy, Award, Star, Calendar, Building } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen gradient-bg">
+      <Navigation />
+      
       <div className="max-w-6xl mx-auto p-4 space-y-12">
         
         {/* Enhanced Header Section */}
-        <div className="pixel-border-enhanced cream-bg p-8 flex flex-col lg:flex-row items-center gap-8">
-          <div className="w-32 h-32 rounded-full border-4 border-black overflow-hidden flex-shrink-0 glow-effect">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-              alt="Yogeshwaran V Profile"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="pixel-font text-4xl lg:text-5xl font-bold text-black mb-2 typing-animation">YOGESHWARAN V</h1>
-            <p className="pixel-font text-xl font-medium text-black mb-2">Computer Science & Engineering Student</p>
-            <p className="pixel-font text-base text-black mb-4 flex items-center justify-center lg:justify-start gap-2">
-              <MapPin size={16} />
-              Chennai, India
-            </p>
-            <p className="pixel-font text-sm text-black leading-relaxed mb-6">
-              Final-year B.Tech student in Computer Science & Engineering with a passion for web development and AI, 
-              aiming to bring innovative ideas and projects that merge technology with creative practical solutions for real-world problems.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-12 px-6 flex items-center gap-2">
-                <Github size={20} />
-                GitHub
-              </Button>
-              <Button className="pixel-font bg-blue-600 text-white border-2 border-black hover:bg-blue-700 h-12 px-6 flex items-center gap-2">
-                <Linkedin size={20} />
-                LinkedIn
-              </Button>
-              <Button className="pixel-font bg-orange-500 text-white border-2 border-black hover:bg-orange-600 h-12 px-6 flex items-center gap-2">
-                <Mail size={20} />
-                Email
-              </Button>
+        <section id="home" className="pt-20">
+          <div className="pixel-border-enhanced cream-bg p-8 flex flex-col lg:flex-row items-center gap-8">
+            <div className="w-32 h-32 rounded-full border-4 border-black overflow-hidden flex-shrink-0 glow-effect">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+                alt="Yogeshwaran V Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="pixel-font text-4xl lg:text-5xl font-bold text-black mb-2 typing-animation">YOGESHWARAN V</h1>
+              <p className="pixel-font text-xl font-medium text-black mb-2">Computer Science & Engineering Student</p>
+              
+              {/* AFK Status */}
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                <span className="pixel-font text-sm text-black font-semibold">AFK</span>
+              </div>
+              
+              <p className="pixel-font text-base text-black mb-4 flex items-center justify-center lg:justify-start gap-2">
+                <MapPin size={16} />
+                Chennai, India
+              </p>
+              
+              {/* Horizontal Divider */}
+              <div className="w-full h-1 bg-black mb-4"></div>
+              
+              <p className="pixel-font text-sm text-black leading-relaxed mb-6">
+                Final-year B.Tech student in Computer Science & Engineering with a passion for web development and AI, 
+                aiming to bring innovative ideas and projects that merge technology with creative practical solutions for real-world problems.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-12 px-6 flex items-center gap-2">
+                  <Github size={20} />
+                  GitHub
+                </Button>
+                <Button className="pixel-font bg-blue-600 text-white border-2 border-black hover:bg-blue-700 h-12 px-6 flex items-center gap-2">
+                  <Linkedin size={20} />
+                  LinkedIn
+                </Button>
+                <Button className="pixel-font bg-orange-500 text-white border-2 border-black hover:bg-orange-600 h-12 px-6 flex items-center gap-2">
+                  <Mail size={20} />
+                  Email
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Enhanced Skills & Tools Section */}
-        <div>
+        <section id="skills">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">SKILLS & TOOLS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <div className="pixel-border-enhanced cream-bg p-6 hover:scale-105 transition-transform">
@@ -107,10 +123,10 @@ const Index = () => {
             <div className="progress-bar-enhanced mb-4"></div>
             <p className="pixel-font text-2xl font-bold text-black text-center">90 WPM</p>
           </div>
-        </div>
+        </section>
 
         {/* Key Achievements Section */}
-        <div>
+        <section id="achievements">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">KEY ACHIEVEMENTS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="achievement-card">
@@ -142,10 +158,10 @@ const Index = () => {
               <p className="pixel-font text-sm text-black">Governor's Award (Scouts & Guides, 2019)</p>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Featured Projects Section */}
-        <div>
+        <section id="projects">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">FEATURED PROJECTS</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="pixel-border-enhanced cream-bg p-6 flex flex-col">
@@ -172,6 +188,28 @@ const Index = () => {
             </div>
 
             <div className="pixel-border-enhanced cream-bg p-6 flex flex-col">
+              <h3 className="pixel-font text-xl font-bold text-black mb-4">RPM - Remote Patient Monitoring</h3>
+              <p className="pixel-font text-sm text-black mb-4 flex-grow leading-relaxed">
+                Developed cross-platform health monitoring dashboard with MQTT server integration for smartwatch data collection in 24 hours. 
+                Built real-time data processing pipeline with Bluetooth connectivity and responsive web interface.
+              </p>
+              <div className="flex flex-wrap gap-1 mb-4">
+                <span className="tech-badge">React Native</span>
+                <span className="tech-badge">Node.js</span>
+                <span className="tech-badge">MQTT</span>
+                <span className="tech-badge">Bluetooth</span>
+              </div>
+              <div className="flex gap-2">
+                <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-10 px-4 flex-1">
+                  View Details
+                </Button>
+                <Button className="pixel-font bg-blue-600 text-white border-2 border-black hover:bg-blue-700 h-10 px-4 flex items-center gap-2">
+                  <ExternalLink size={16} />
+                </Button>
+              </div>
+            </div>
+
+            <div className="pixel-border-enhanced cream-bg p-6 flex flex-col">
               <h3 className="pixel-font text-xl font-bold text-black mb-4">ICIOT 2025 Conference Website</h3>
               <p className="pixel-font text-sm text-black mb-4 flex-grow leading-relaxed">
                 Built responsive international conference website using Next.js with headless CMS and Microsoft CMT integration. 
@@ -192,33 +230,11 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-
-            <div className="pixel-border-enhanced cream-bg p-6 flex flex-col">
-              <h3 className="pixel-font text-xl font-bold text-black mb-4">SignLingo: ISL Recognition System</h3>
-              <p className="pixel-font text-sm text-black mb-4 flex-grow leading-relaxed">
-                Developed accessible Indian Sign Language recognition system achieving 94.2% accuracy using CNNs and RNNs. 
-                Supports real-time multilingual translation for Hindi, Tamil, Telugu, and English.
-              </p>
-              <div className="flex flex-wrap gap-1 mb-4">
-                <span className="tech-badge">TensorFlow</span>
-                <span className="tech-badge">Computer Vision</span>
-                <span className="tech-badge">React</span>
-                <span className="tech-badge">Neural Networks</span>
-              </div>
-              <div className="flex gap-2">
-                <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-10 px-4 flex-1">
-                  View Details
-                </Button>
-                <Button className="pixel-font bg-green-600 text-white border-2 border-black hover:bg-green-700 h-10 px-4 flex items-center gap-2">
-                  <ExternalLink size={16} />
-                </Button>
-              </div>
-            </div>
           </div>
-        </div>
+        </section>
 
         {/* Experience Section */}
-        <div>
+        <section id="experience">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">EXPERIENCE</h2>
           <div className="space-y-6">
             <div className="timeline-item">
@@ -270,10 +286,10 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Leadership & Activities Section */}
-        <div>
+        <section id="leadership">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">LEADERSHIP & ACTIVITIES</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="pixel-border-enhanced cream-bg p-6">
@@ -304,45 +320,10 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Design Vault Section */}
-        <div>
-          <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">DESIGN VAULT & SETUP</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="pixel-border-enhanced overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop"
-                alt="Coding setup with RGB lighting"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="pixel-border-enhanced overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
-                alt="Development environment and workspace"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="pixel-border-enhanced overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
-                alt="UI/UX design mockups and wireframes"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="pixel-border-enhanced overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop"
-                alt="Project screenshots and dashboards"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-          </div>
-        </div>
+        </section>
 
         {/* Resume Section */}
-        <div className="pixel-border-enhanced bg-black p-8 text-center">
+        <section id="resume" className="pixel-border-enhanced bg-black p-8 text-center">
           <h2 className="pixel-font text-3xl font-bold text-white mb-4 underline-animation">RESUME</h2>
           <p className="pixel-font text-lg text-white mb-6">
             Want to see more about my qualifications and experience?
@@ -357,10 +338,10 @@ const Index = () => {
               View Online
             </Button>
           </div>
-        </div>
+        </section>
 
         {/* Enhanced Contact Section */}
-        <div className="pixel-border-enhanced bg-black p-8">
+        <section id="contact" className="pixel-border-enhanced bg-black p-8">
           <h2 className="pixel-font text-3xl font-bold text-white mb-8 text-center underline-animation">LET'S CONNECT</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
             <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3">
@@ -392,7 +373,7 @@ const Index = () => {
           <p className="pixel-font text-sm text-white text-center">
             YOGESHWARAN V | All rights reserved | Built with ❤️ in Chennai
           </p>
-        </div>
+        </section>
       </div>
     </div>
   );
