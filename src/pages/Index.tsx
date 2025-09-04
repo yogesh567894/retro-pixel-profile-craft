@@ -1,51 +1,72 @@
-
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Trophy, Award, Star, Calendar, Building } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
     <div className="min-h-screen gradient-bg">
+      <Navigation />
+      
       <div className="max-w-6xl mx-auto p-4 space-y-12">
         
         {/* Enhanced Header Section */}
-        <div className="pixel-border-enhanced cream-bg p-8 flex flex-col lg:flex-row items-center gap-8">
-          <div className="w-32 h-32 rounded-full border-4 border-black overflow-hidden flex-shrink-0 glow-effect">
-            <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-              alt="Yogeshwaran V Profile"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="pixel-font text-4xl lg:text-5xl font-bold text-black mb-2 typing-animation">YOGESHWARAN V</h1>
-            <p className="pixel-font text-xl font-medium text-black mb-2">Computer Science & Engineering Student</p>
-            <p className="pixel-font text-base text-black mb-4 flex items-center justify-center lg:justify-start gap-2">
-              <MapPin size={16} />
-              Chennai, India
-            </p>
-            <p className="pixel-font text-sm text-black leading-relaxed mb-6">
-              Final-year B.Tech student in Computer Science & Engineering with a passion for web development and AI, 
-              aiming to bring innovative ideas and projects that merge technology with creative practical solutions for real-world problems.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-12 px-6 flex items-center gap-2">
-                <Github size={20} />
-                GitHub
-              </Button>
-              <Button className="pixel-font bg-blue-600 text-white border-2 border-black hover:bg-blue-700 h-12 px-6 flex items-center gap-2">
-                <Linkedin size={20} />
-                LinkedIn
-              </Button>
-              <Button className="pixel-font bg-orange-500 text-white border-2 border-black hover:bg-orange-600 h-12 px-6 flex items-center gap-2">
-                <Mail size={20} />
-                Email
-              </Button>
+        <section id="home" className="pt-20">
+          <div className="pixel-border-enhanced cream-bg p-8 flex flex-col lg:flex-row items-center gap-8">
+            <div className="w-32 h-32 rounded-full border-4 border-black overflow-hidden flex-shrink-0 glow-effect">
+              <img 
+                src="/profilepic.jpg"
+                alt="Yogeshwaran V Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex-1 text-center lg:text-left">
+              <h1 className="pixel-font text-4xl lg:text-5xl font-bold text-black mb-2 typing-animation">YOGESHWARAN V</h1>
+              <p className="pixel-font text-xl font-medium text-black mb-2">Computer Science & Engineering Student</p>
+              
+              {/* AFK Status */}
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                <span className="pixel-font text-sm text-black font-semibold">AFK</span>
+              </div>
+              
+              <p className="pixel-font text-base text-black mb-4 flex items-center justify-center lg:justify-start gap-2">
+                <MapPin size={16} />
+                Chennai, India
+              </p>
+              
+              {/* Horizontal Divider */}
+              <div className="w-full h-1 bg-black mb-4"></div>
+              
+              <p className="pixel-font text-sm text-black leading-relaxed mb-6">
+                Final-year B.Tech student in Computer Science & Engineering with a passion for web development and AI, 
+                aiming to bring innovative ideas and projects that merge technology with creative practical solutions for real-world problems.
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <a href="https://github.com/yogesh567894" target="_blank" rel="noopener noreferrer">
+                  <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-12 px-6 flex items-center gap-2">
+                    <Github size={20} />
+                    GitHub
+                  </Button>
+                </a>
+                <a href="https://www.linkedin.com/in/yogesh-v-390780256/" target="_blank" rel="noopener noreferrer">
+                  <Button className="pixel-font bg-blue-600 text-white border-2 border-black hover:bg-blue-700 h-12 px-6 flex items-center gap-2">
+                    <Linkedin size={20} />
+                    LinkedIn
+                  </Button>
+                </a>
+                <a href="mailto:yogeshwaranvenkat05@gmail.com">
+                  <Button className="pixel-font bg-orange-500 text-white border-2 border-black hover:bg-orange-600 h-12 px-6 flex items-center gap-2">
+                    <Mail size={20} />
+                    Email
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Enhanced Skills & Tools Section */}
-        <div>
+        <section id="skills">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">SKILLS & TOOLS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             <div className="pixel-border-enhanced cream-bg p-6 hover:scale-105 transition-transform">
@@ -107,33 +128,33 @@ const Index = () => {
             <div className="progress-bar-enhanced mb-4"></div>
             <p className="pixel-font text-2xl font-bold text-black text-center">90 WPM</p>
           </div>
-        </div>
+        </section>
 
         {/* Key Achievements Section */}
-        <div>
+        <section id="achievements">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">KEY ACHIEVEMENTS</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="achievement-card">
+            <a href="https://www.linkedin.com/posts/yogesh-v-390780256_hackathon-devtrails-guidewiredevsummit-activity-7329893153056968704-Xx9-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8ePhwBmYT0bZCiDreBGjKMmivA9hp9Yik" target="_blank" rel="noopener noreferrer" className="achievement-card">
               <div className="flex items-center gap-3 mb-3">
                 <Trophy className="text-yellow-500" size={24} />
                 <h3 className="pixel-font text-lg font-bold text-black">Top 5 Finalist</h3>
               </div>
               <p className="pixel-font text-sm text-black">Guidewire DEVTrails 2025 (739 teams, 3,002 participants)</p>
-            </div>
-            <div className="achievement-card">
+            </a>
+            <a href="https://www.linkedin.com/posts/yogesh-v-390780256_grateful-we-landed-3rd-place-at-codefest2025-activity-7296851040694345728-YlRE?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8ePhwBmYT0bZCiDreBGjKMmivA9hp9Yik" target="_blank" rel="noopener noreferrer" className="achievement-card">
               <div className="flex items-center gap-3 mb-3">
                 <Award className="text-orange-500" size={24} />
                 <h3 className="pixel-font text-lg font-bold text-black">3rd Place</h3>
               </div>
               <p className="pixel-font text-sm text-black">CodeFest 2025: Remote Patient Monitoring (24-hour hackathon)</p>
-            </div>
-            <div className="achievement-card">
+            </a>
+            <a href="https://www.linkedin.com/posts/yogesh-v-390780256_ideathon2024-innovation-nfc-activity-7193854662351986688-X8Kb?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8ePhwBmYT0bZCiDreBGjKMmivA9hp9Yik" target="_blank" rel="noopener noreferrer" className="achievement-card">
               <div className="flex items-center gap-3 mb-3">
                 <Star className="text-blue-500" size={24} />
                 <h3 className="pixel-font text-lg font-bold text-black">Winner</h3>
               </div>
               <p className="pixel-font text-sm text-black">IDEATHON 2024: NFC Railway Solution (Southern Railways)</p>
-            </div>
+            </a>
             <div className="achievement-card">
               <div className="flex items-center gap-3 mb-3">
                 <Award className="text-green-500" size={24} />
@@ -142,10 +163,10 @@ const Index = () => {
               <p className="pixel-font text-sm text-black">Governor's Award (Scouts & Guides, 2019)</p>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Featured Projects Section */}
-        <div>
+        <section id="projects">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">FEATURED PROJECTS</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="pixel-border-enhanced cream-bg p-6 flex flex-col">
@@ -162,12 +183,42 @@ const Index = () => {
                 <span className="tech-badge">DevOps</span>
               </div>
               <div className="flex gap-2">
-                <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-10 px-4 flex-1">
-                  View Details
-                </Button>
-                <Button className="pixel-font bg-gray-800 text-white border-2 border-black hover:bg-gray-700 h-10 px-4 flex items-center gap-2">
-                  <Github size={16} />
-                </Button>
+                <a href="https://github.com/Sonlux/K8S-Anomaly-Detection-and-Remediation/graphs/contributors" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-10 px-4 w-full">
+                    View Details
+                  </Button>
+                </a>
+                <a href="https://github.com/Sonlux/K8S-Anomaly-Detection-and-Remediation/graphs/contributors" target="_blank" rel="noopener noreferrer">
+                  <Button className="pixel-font bg-gray-800 text-white border-2 border-black hover:bg-gray-700 h-10 px-4 flex items-center gap-2">
+                    <Github size={16} />
+                  </Button>
+                </a>
+              </div>
+            </div>
+
+            <div className="pixel-border-enhanced cream-bg p-6 flex flex-col">
+              <h3 className="pixel-font text-xl font-bold text-black mb-4">RPM - Remote Patient Monitoring</h3>
+              <p className="pixel-font text-sm text-black mb-4 flex-grow leading-relaxed">
+                Developed cross-platform health monitoring dashboard with MQTT server integration for smartwatch data collection in 24 hours. 
+                Built real-time data processing pipeline with Bluetooth connectivity and responsive web interface.
+              </p>
+              <div className="flex flex-wrap gap-1 mb-4">
+                <span className="tech-badge">React Native</span>
+                <span className="tech-badge">Node.js</span>
+                <span className="tech-badge">MQTT</span>
+                <span className="tech-badge">Bluetooth</span>
+              </div>
+              <div className="flex gap-2">
+                <a href="https://github.com/yogesh567894/healthwatch-expo-master.git" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-10 px-4 w-full">
+                    View Details
+                  </Button>
+                </a>
+                <a href="https://github.com/yogesh567894/healthwatch-expo-master.git" target="_blank" rel="noopener noreferrer">
+                  <Button className="pixel-font bg-blue-600 text-white border-2 border-black hover:bg-blue-700 h-10 px-4 flex items-center gap-2">
+                    <ExternalLink size={16} />
+                  </Button>
+                </a>
               </div>
             </div>
 
@@ -184,41 +235,23 @@ const Index = () => {
                 <span className="tech-badge">Microsoft CMT</span>
               </div>
               <div className="flex gap-2">
-                <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-10 px-4 flex-1">
-                  View Details
-                </Button>
-                <Button className="pixel-font bg-blue-600 text-white border-2 border-black hover:bg-blue-700 h-10 px-4 flex items-center gap-2">
-                  <ExternalLink size={16} />
-                </Button>
-              </div>
-            </div>
-
-            <div className="pixel-border-enhanced cream-bg p-6 flex flex-col">
-              <h3 className="pixel-font text-xl font-bold text-black mb-4">SignLingo: ISL Recognition System</h3>
-              <p className="pixel-font text-sm text-black mb-4 flex-grow leading-relaxed">
-                Developed accessible Indian Sign Language recognition system achieving 94.2% accuracy using CNNs and RNNs. 
-                Supports real-time multilingual translation for Hindi, Tamil, Telugu, and English.
-              </p>
-              <div className="flex flex-wrap gap-1 mb-4">
-                <span className="tech-badge">TensorFlow</span>
-                <span className="tech-badge">Computer Vision</span>
-                <span className="tech-badge">React</span>
-                <span className="tech-badge">Neural Networks</span>
-              </div>
-              <div className="flex gap-2">
-                <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-10 px-4 flex-1">
-                  View Details
-                </Button>
-                <Button className="pixel-font bg-green-600 text-white border-2 border-black hover:bg-green-700 h-10 px-4 flex items-center gap-2">
-                  <ExternalLink size={16} />
-                </Button>
+                <a href="https://www.iciot2025.com/" target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <Button className="pixel-font bg-black text-orange-400 border-2 border-black hover:bg-gray-900 h-10 px-4 w-full">
+                    View Details
+                  </Button>
+                </a>
+                <a href="https://www.iciot2025.com/" target="_blank" rel="noopener noreferrer">
+                  <Button className="pixel-font bg-blue-600 text-white border-2 border-black hover:bg-blue-700 h-10 px-4 flex items-center gap-2">
+                    <ExternalLink size={16} />
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Experience Section */}
-        <div>
+        <section id="experience">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">EXPERIENCE</h2>
           <div className="space-y-6">
             <div className="timeline-item">
@@ -241,7 +274,9 @@ const Index = () => {
             <div className="timeline-item">
               <div className="pixel-border-enhanced cream-bg p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                  <h3 className="pixel-font text-xl font-bold text-black">SRMTech</h3>
+                  <a href="https://www.srmtech.com/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="pixel-font text-xl font-bold text-black">SRMTech</h3>
+                  </a>
                   <span className="pixel-font text-sm text-gray-600 flex items-center gap-1">
                     <Calendar size={16} />
                     06/25 – Present
@@ -257,7 +292,9 @@ const Index = () => {
             <div className="timeline-item">
               <div className="pixel-border-enhanced cream-bg p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                  <h3 className="pixel-font text-xl font-bold text-black">Udrive</h3>
+                  <a href="https://jsdl.in/DT-48N5BJBEU6V" target="_blank" rel="noopener noreferrer">
+                    <h3 className="pixel-font text-xl font-bold text-black">Udrive</h3>
+                  </a>
                   <span className="pixel-font text-sm text-gray-600 flex items-center gap-1">
                     <Calendar size={16} />
                     12/24 – 05/25
@@ -270,17 +307,19 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         {/* Leadership & Activities Section */}
-        <div>
+        <section id="leadership">
           <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">LEADERSHIP & ACTIVITIES</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="pixel-border-enhanced cream-bg p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Building className="text-blue-600" size={24} />
                 <div>
-                  <h3 className="pixel-font text-lg font-bold text-black">CENTINELS – SRMIST</h3>
+                  <a href="https://www.instagram.com/teamcentinelsrm/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="pixel-font text-lg font-bold text-black">CENTINELS – SRMIST</h3>
+                  </a>
                   <p className="pixel-font text-sm text-gray-600">Sept 2023 – Apr 2025</p>
                 </div>
               </div>
@@ -294,7 +333,9 @@ const Index = () => {
               <div className="flex items-center gap-3 mb-4">
                 <Building className="text-green-600" size={24} />
                 <div>
-                  <h3 className="pixel-font text-lg font-bold text-black">Cherry+ Network – SRMIST</h3>
+                  <a href="https://www.instagram.com/cherry.network/" target="_blank" rel="noopener noreferrer">
+                    <h3 className="pixel-font text-lg font-bold text-black">Cherry+ Network – SRMIST</h3>
+                  </a>
                   <p className="pixel-font text-sm text-gray-600">Sept 2023 – Apr 2025</p>
                 </div>
               </div>
@@ -304,82 +345,59 @@ const Index = () => {
               </p>
             </div>
           </div>
-        </div>
-
-        {/* Design Vault Section */}
-        <div>
-          <h2 className="pixel-font text-3xl font-bold text-black mb-8 underline-animation">DESIGN VAULT & SETUP</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="pixel-border-enhanced overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop"
-                alt="Coding setup with RGB lighting"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="pixel-border-enhanced overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop"
-                alt="Development environment and workspace"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="pixel-border-enhanced overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop"
-                alt="UI/UX design mockups and wireframes"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="pixel-border-enhanced overflow-hidden hover:scale-105 transition-transform">
-              <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop"
-                alt="Project screenshots and dashboards"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-          </div>
-        </div>
+        </section>
 
         {/* Resume Section */}
-        <div className="pixel-border-enhanced bg-black p-8 text-center">
+        <section id="resume" className="pixel-border-enhanced bg-black p-8 text-center">
           <h2 className="pixel-font text-3xl font-bold text-white mb-4 underline-animation">RESUME</h2>
           <p className="pixel-font text-lg text-white mb-6">
             Want to see more about my qualifications and experience?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="pixel-font bg-orange-400 text-black border-2 border-orange-400 hover:bg-orange-500 h-12 px-8 flex items-center gap-2">
-              <Download size={20} />
-              Download Resume
-            </Button>
-            <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-8 flex items-center gap-2">
-              <ExternalLink size={20} />
-              View Online
-            </Button>
+            <a href="/Yogeshwaran_Resume_Academy2026_.pdf" download>
+              <Button className="pixel-font bg-orange-400 text-black border-2 border-orange-400 hover:bg-orange-500 h-12 px-8 flex items-center gap-2">
+                <Download size={20} />
+                Download Resume
+              </Button>
+            </a>
+            {/*
+            <a href="/Yogeshwaran_Resume_Academy2026_.pdf" target="_blank" rel="noopener noreferrer">
+              <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-8 flex items-center gap-2">
+                <ExternalLink size={20} />
+                View Online
+              </Button>
+            </a>
+            */}
           </div>
-        </div>
+        </section>
 
         {/* Enhanced Contact Section */}
-        <div className="pixel-border-enhanced bg-black p-8">
+        <section id="contact" className="pixel-border-enhanced bg-black p-8">
           <h2 className="pixel-font text-3xl font-bold text-white mb-8 text-center underline-animation">LET'S CONNECT</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-            <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3">
-              <Mail size={20} />
-              <span className="hidden sm:inline">yogeshwaranvenkat05@gmail.com</span>
-              <span className="sm:hidden">Email</span>
-            </Button>
+            <a href="mailto:yogeshwaranvenkat05@gmail.com">
+              <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3 w-full">
+                <Mail size={20} />
+                <span className="hidden sm:inline">yogeshwaranvenkat05@gmail.com</span>
+                <span className="sm:hidden">Email</span>
+              </Button>
+            </a>
             <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3">
               <Phone size={20} />
               +91 8610694409
             </Button>
-            <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3">
-              <Linkedin size={20} />
-              LinkedIn
-            </Button>
-            <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3">
-              <Github size={20} />
-              GitHub
-            </Button>
+            <a href="https://www.linkedin.com/in/yogesh-v-390780256/" target="_blank" rel="noopener noreferrer">
+              <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3 w-full">
+                <Linkedin size={20} />
+                LinkedIn
+              </Button>
+            </a>
+            <a href="https://github.com/yogesh567894" target="_blank" rel="noopener noreferrer">
+              <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3 w-full">
+                <Github size={20} />
+                GitHub
+              </Button>
+            </a>
             <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3">
               <MapPin size={20} />
               Chennai, India
@@ -392,7 +410,7 @@ const Index = () => {
           <p className="pixel-font text-sm text-white text-center">
             YOGESHWARAN V | All rights reserved | Built with ❤️ in Chennai
           </p>
-        </div>
+        </section>
       </div>
     </div>
   );
