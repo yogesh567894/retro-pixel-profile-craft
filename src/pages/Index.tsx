@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Trophy, Award, Star, Calendar, Building } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Download, Trophy, Award, Star, Calendar, Building, Instagram } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 const Index = () => {
@@ -124,9 +124,9 @@ const Index = () => {
             </div>
           </div>
           <div className="pixel-border-enhanced cream-bg p-6">
-            <p className="pixel-font text-base font-medium text-black mb-4">Pro Typing Speed</p>
+            <p className="pixel-font text-base font-medium text-black mb-4">Shipping Speed</p>
             <div className="progress-bar-enhanced mb-4"></div>
-            <p className="pixel-font text-2xl font-bold text-black text-center">90 WPM</p>
+            <p className="pixel-font text-2xl font-bold text-black text-center">48 Hrs</p>
           </div>
         </section>
 
@@ -347,27 +347,35 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Resume Section */}
-        <section id="resume" className="pixel-border-enhanced bg-black p-8 text-center">
-          <h2 className="pixel-font text-3xl font-bold text-white mb-4 underline-animation">RESUME</h2>
-          <p className="pixel-font text-lg text-white mb-6">
-            Want to see more about my qualifications and experience?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/Yogeshwaran_Resume_Academy2026_.pdf" download>
-              <Button className="pixel-font bg-orange-400 text-black border-2 border-orange-400 hover:bg-orange-500 h-12 px-8 flex items-center gap-2">
-                <Download size={20} />
-                Download Resume
-              </Button>
-            </a>
-            {/*
-            <a href="/Yogeshwaran_Resume_Academy2026_.pdf" target="_blank" rel="noopener noreferrer">
-              <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-8 flex items-center gap-2">
-                <ExternalLink size={20} />
-                View Online
-              </Button>
-            </a>
-            */}
+        {/* Documents Section */}
+        <section id="documents" className="pixel-border-enhanced bg-black p-8">
+          <h2 className="pixel-font text-3xl font-bold text-white mb-8 underline-animation">DOCUMENTS</h2>
+          <div className="space-y-6">
+            <div className="flex items-center justify-between">
+              <p className="pixel-font text-lg text-white">
+                Want to see more about my qualifications and experience?
+              </p>
+              <a href="/Yogeshwaran_Resume_Academy2026_.pdf" download>
+                <Button className="pixel-font bg-orange-400 text-black border-2 border-orange-400 hover:bg-orange-500 h-12 px-8 flex items-center gap-2">
+                  <Download size={20} />
+                  Resume
+                </Button>
+              </a>
+            </div>
+            
+            <div className="w-full h-[2px] bg-white opacity-30"></div>
+            
+            <div className="flex items-center justify-between">
+              <p className="pixel-font text-lg text-white">
+                Wanna know who I am?
+              </p>
+              <a href="/DesignFolio.pdf" download>
+                <Button className="pixel-font bg-orange-400 text-black border-2 border-orange-400 hover:bg-orange-500 h-12 px-8 flex items-center gap-2">
+                  <Download size={20} />
+                  DesignFolio
+                </Button>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -402,13 +410,15 @@ const Index = () => {
               <MapPin size={20} />
               Chennai, India
             </Button>
-            <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3">
-              <ExternalLink size={20} />
-              Website
-            </Button>
+            <a href="https://www.instagram.com/_yogesh___._/" target="_blank" rel="noopener noreferrer">
+              <Button className="pixel-font bg-transparent text-white border-2 border-white hover:bg-white hover:text-black h-12 px-6 flex items-center gap-3 w-full">
+                <Instagram size={20} />
+                Instagram
+              </Button>
+            </a>
           </div>
           <p className="pixel-font text-sm text-white text-center">
-            YOGESHWARAN V | All rights reserved | Built with ❤️ in Chennai
+            Open to new conversations, friendships, and professional connections.
           </p>
         </section>
       </div>
