@@ -257,15 +257,15 @@ const Index = () => {
             <div className="timeline-item">
               <div className="pixel-border-enhanced cream-bg p-6">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                  <h3 className="pixel-font text-xl font-bold text-black">Own Venture</h3>
+                  <h3 className="pixel-font text-xl font-bold text-black">Own Venture(Experiment)</h3>
                   <span className="pixel-font text-sm text-gray-600 flex items-center gap-1">
                     <Calendar size={16} />
-                    03/25 – Present
+                    01/26 – Present
                   </span>
                 </div>
                 <p className="pixel-font text-base font-medium text-black mb-2">Founder & Team Lead</p>
                 <p className="pixel-font text-sm text-black leading-relaxed">
-                  Developing agentic CRM + ERP system for Sethu Bhaskara Matriculation (10,000 students) while building 
+                  Developing agentic CRM + ERP system for My School (10,000 students) while building 
                   scalable SaaS product for educational technology market.
                 </p>
               </div>
@@ -279,7 +279,7 @@ const Index = () => {
                   </a>
                   <span className="pixel-font text-sm text-gray-600 flex items-center gap-1">
                     <Calendar size={16} />
-                    06/25 – Present
+                    06/25 – 12/25
                   </span>
                 </div>
                 <p className="pixel-font text-base font-medium text-black mb-2">Software Development Intern</p>
